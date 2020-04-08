@@ -78,8 +78,11 @@ int main() {
             }
             case 2 : {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> fe574b6... Ended coding Task#2.
                 int __choice, firstArrCapacity, secondArrCapacity;
                 bool __flag = false;
                 std::cout << "Input capacity of the first array :" << std::endl;
