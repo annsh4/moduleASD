@@ -33,22 +33,6 @@ public class Task2 implements Task {
 		System.out.println("+------+------------+------------+");
 	}
 
-	private int roundMark(Integer mark) {
-		if(mark < 37) {
-			return mark;
-		}
-		int dozens = mark / 10;
-		int ones = mark % 10;
-		if (ones <= 2) {
-			ones = 0;
-		} else if (ones <= 6) {
-			ones = 5;
-		} else {
-			ones = 10;
-		}
-		return dozens * 10 + ones;
-	}
-
 	private void inputMarks() {
 		int counter = 1;
 		System.out.println("Enter students' marks from 0 to 100: ");
@@ -71,5 +55,21 @@ public class Task2 implements Task {
 				input.next();
 			}
 		} while (true);
+	}
+
+	private int roundMark(Integer mark) {
+		if(mark < 37) {
+			return mark;
+		}
+		int dozens = mark / 10;
+		int ones = mark % 10;
+		if (ones <= 2) {
+			ones = 0;
+		} else if (ones <= 6) {
+			ones = 5;
+		} else {
+			ones = 10;
+		}
+		return dozens * 10 + ones;
 	}
 }

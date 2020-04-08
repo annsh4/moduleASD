@@ -1,3 +1,10 @@
+/*
+ * Группа: ПП-11
+ * Имя: Меламед Михаил
+ * Вариант: 4
+ * Номер по списку: 11
+ */
+
 package me.salmonmoses;
 
 import java.util.InputMismatchException;
