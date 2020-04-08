@@ -1,0 +1,115 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+
+        System.out.println("Завдання 1");
+        int[][] a;
+        int n,k;
+        System.out.println("Введіть розмір матриці\n");
+        n= num.nextInt();
+        a=new int [n][n];
+        System.out.println("Ввести матрицю автоматично- 1; в ручну- 2\n");
+        k=num.nextInt();
+        if (k==1) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    a[i][j] = (int) (Math.random() * 101 - 100);
+                    System.out.println(" " + a[i][j]);
+                }
+            }
+        }
+        if (k==2) {
+            System.out.println("Введіть числа\n");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    a[i][j] = num.nextInt();
+                }
+            };
+        }
+        if (k!=1 && k!=2) {
+            System.out.println("Вирішив пожартувати? Буде на автоматі тоді\n");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    a[i][j] = (int) (Math.random() * 101 - 100);
+                    System.out.println(" " + a[i][j]);
+                }
+            }
+        }
+        int p=0;
+        int s=0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i==j){
+                        p=p+a[i][j];
+                }
+                if(i+j+1==n){
+                       s=s+a[i][j];
+                }
+            }
+        }
+        p=p-s;
+        System.out.println("різниця така"+p+"\n");
+
+
+        System.out.println("Завдання 2");
+        int [] mas;
+        int [] b;
+        boolean isSorted = false;
+        int buf;
+        int m,y;
+        System.out.println("Введіть кількість ігор до 100\n");
+        m= num.nextInt();
+        if (m<3)
+            m=5;
+        mas=new int [m];
+        b=new int [m];
+        System.out.println("Ввести матрицю автоматично- 1; в ручну- 2\n");
+        y=num.nextInt();
+        if (y==1) {
+            System.out.println("Результати:");
+            for (int i = 0; i < m; i++) {
+                    mas[i] = (int) (Math.random() * 1000 + 1);
+                    System.out.println(" " + mas[i]);
+            }
+        }
+        if (y==2) {
+            System.out.println("Введіть результати");
+            for (int i = 0; i < m; i++) {
+                    mas[i] = num.nextInt();
+            };
+        }
+        if (y!=1 && y!=2) {
+            System.out.println("Вирішив пожартувати? Буде на автоматі тоді\n");
+            System.out.println("Результати:");
+            for (int i = 0; i < m; i++) {
+                mas[i] = (int) (Math.random() * 1000 +1);
+                System.out.println(" " + mas[i]);
+            }
+        }
+        while(!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < mas.length-1; i++) {
+                if(mas[i] > mas[i+1]){
+                    isSorted = false;
+                    buf = mas[i];
+                    mas[i] = mas[i+1];
+                    mas[i+1] = buf;
+                }
+            }
+        }
+        for (int i=0; i<m; i++){
+            b[i]=mas[m-i-1];
+        }
+        System.out.print("кращий:");
+        System.out.println(Arrays.toString(mas));
+        System.out.print("гірший:");
+        System.out.println(Arrays.toString(b));
+    }
+}
