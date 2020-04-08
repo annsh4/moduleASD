@@ -1,0 +1,54 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("\n" + "Enter the number of games:");
+        int N = getNumber();
+        int[] array = new int[N];
+
+
+        if (N < 1 || N > 100) {
+            System.out.println("Invalid range! Range required 1-100!");
+            return;
+        }
+        int min =1001;
+        int max = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Game " + i + ", \bresult is:");
+
+            array[i] = getNumber();
+
+            if(array[i] < min) {
+                min = array[i];
+            }
+            if(array[i] > max) {
+                max = array[i];
+            }
+
+
+        }
+        System.out.println("Result  " + " Min    " + "    Max");
+        for (int i = 0; i < N; i++) {
+
+            System.out.printf("%d\t   %d\t  %d\n",array[i], min, max);
+
+        }
+    }
+
+
+
+    public static int getNumber() {
+        Scanner in = new Scanner(System.in);
+        if(in.hasNextInt()) {
+            return in.nextInt();
+        } else {
+            System.out.println("Wrong input! Try again. ");
+            return getNumber();
+        }
+    }
+}
