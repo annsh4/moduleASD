@@ -1,0 +1,50 @@
+package com.company;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("\n" + "Enter the number of ratings:");
+        int N = getNumber();
+        int[] array = new int[N];
+        int[] totalScore = new int [N];
+
+        if (N < 0 || N > 100) {
+            System.out.println("Invalid range! Range required 0-100!");
+            return;
+        }
+
+        System.out.println("Enter marks");
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Mark " + i  + " is:");
+            array[i] = getNumber();
+
+            int rounded = 5 * (int) Math.round(array[i] / 5.0);
+
+            if (rounded >= 40)
+                totalScore[i] = rounded;
+            else
+                totalScore[i] = 0;
+        }
+   
+        for (int i = 0; i < N; i++) {
+            System.out.println("Subject  " + " Score  " + " Total score");
+            System.out.printf("%d\t      %d\t     %d\n", i + 1, array[i], totalScore[i]);
+        }
+    }
+    public static int getNumber() {
+        Scanner in = new Scanner(System.in);
+        if(in.hasNextInt()) {
+            return in.nextInt();
+        } else {
+            System.out.println("Wrong input! Try again. ");
+            return getNumber();
+        }
+    }
+}
+
