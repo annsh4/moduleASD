@@ -22,7 +22,7 @@ public class Task2 implements Task {
 	public void solve() {
 		this.marks = new ArrayList<>();
 		inputMarks();
-		System.out.println(Arrays.toString(marks.toArray(Integer[]::new)));
+//		System.out.println(Arrays.toString(marks.toArray(Integer[]::new)));
 		System.out.println("+------+------------+------------+");
 		System.out.printf("|%6s|%12s|%12s|\n", "Number", "Entered mark", "Rounded mark");
 		System.out.println("+------+------------+------------+");
@@ -38,27 +38,22 @@ public class Task2 implements Task {
 		System.out.println("Enter students' marks from 0 to 100: ");
 		do {
 			try {
-				System.out.print(counter + ". ");
-				int nextMark = input.nextInt();
-				if (nextMark < 0 || nextMark > 100) {
-					throw new InputMismatchException();
-				}
-				marks.add(nextMark);
-				System.out.print("More [y]? ");
-				String answer = input.next();
-				if (answer.equalsIgnoreCase("n") || answer.equalsIgnoreCase("no")) {
+				marks.add(Prompts.promptInt(counter + ". ", 0, 100));
+				if (!Prompts.promptBoolean("More [n]? ")) {
 					break;
 				}
 				counter++;
 			} catch (InputMismatchException e) {
 				System.out.println("Invalid input, try again!");
 				input.next();
+			} catch (AnswerOutOfBoundsException e) {
+				System.out.println("Invalid input, try again!");
 			}
 		} while (true);
 	}
 
 	private int roundMark(Integer mark) {
-		if(mark < 37) {
+		if (mark < 37) {
 			return mark;
 		}
 		int dozens = mark / 10;

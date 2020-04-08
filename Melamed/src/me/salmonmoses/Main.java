@@ -42,8 +42,7 @@ public class Main {
         int selection;
         try (input) {
             do {
-                System.out.print("> ");
-                selection = input.nextInt();
+                selection = Prompts.promptInt("> ");
                 try {
                     tasks[selection - 1].solve();
                 } catch (ArrayIndexOutOfBoundsException e) {
