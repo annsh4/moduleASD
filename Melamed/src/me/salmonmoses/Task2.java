@@ -27,7 +27,7 @@ public class Task2 implements Task {
 		System.out.printf("|%6s|%12s|%12s|\n", "Number", "Entered mark", "Rounded mark");
 		System.out.println("+------+------------+------------+");
 		for (int i = 0; i < marks.size(); i++) {
-			Integer mark = marks.get(i);
+			int mark = marks.get(i);
 			System.out.printf("|% 6d|% 12d|% 12d|\n", i, mark, roundMark(mark));
 		}
 		System.out.println("+------+------------+------------+");
@@ -52,7 +52,7 @@ public class Task2 implements Task {
 		} while (true);
 	}
 
-	private int roundMark(Integer mark) {
+	private int roundMark(int mark) {
 		if (mark < 37) {
 			return mark;
 		}
