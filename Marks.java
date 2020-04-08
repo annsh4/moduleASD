@@ -7,17 +7,21 @@ public class Marks {
         Scanner in = new Scanner(System.in);
         System.out.println("Введіть розмірність n (0-100): ");
         int n = in.nextInt();
+        int[] mark = new int[n]; //оцінки
+        int[] markE = new int[n]; //відкориговані оцінки
         for(int i=0; i<n; i++){
-            mark=in.nextInt();
-            int mark1=mark%10, mark2=(mark/10)%10,mark3=(mark/100); //розкладання оцінки на цифри
-            System.out.print(n+"\t");
-            System.out.print(mark+"\t");
-            System.out.print(mark1+" "+mark2+" "+mark3+"\t");
+            System.out.print("Введіть оцінку. mark= ");
+            mark[i]=in.nextInt();
+            //int mark1=mark%10, mark2=(mark/10)%10,mark3=(mark/100); //розкладання оцінки на цифри
+            if (mark[i]<=40)
+                    markE=mark;
+            else markE[i] = 5 *(int)Math.round(mark[i]/5.0);
+        }
+
+        for(int i=0; i<n; i++){ //виведення результату
+            System.out.printf("%d\t%d\t%d\n", i+1, mark[i], markE[i]);
         }
         System.out.print("\n");
-        for(int i=0; i<n; i++){
-        }
-        if(mark<40) mark=0; //неуспіх
         in.close();
     }
 }
