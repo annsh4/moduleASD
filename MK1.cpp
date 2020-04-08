@@ -38,6 +38,7 @@ int main()
 	n = readInt("2. Enter a number of games: ", true, true);
 	int* results = new int[n];
 	initialize(results, n, true);
+	processResults(results, n);
 
     return 0;
 }
@@ -49,6 +50,7 @@ void displayMatrix(int** matrix, int size)
 		cout << "\n{" << matrix[0][0] << "}\n";
 		return;
 	}
+
 	for (int i = 0; i < size; i++)
 	{
 		if (i == 0)
@@ -60,6 +62,7 @@ void displayMatrix(int** matrix, int size)
 			}
 			cout << "\\\n";
 		}
+
 		else if (i == size - 1)
 		{
 			cout << "\\ ";
@@ -69,6 +72,7 @@ void displayMatrix(int** matrix, int size)
 			}
 			cout << "/\n";
 		}
+
 		else
 		{
 			cout << "| ";
@@ -274,6 +278,7 @@ void initialize(int* arr, int size, bool isUnsigned)
 int processData1(int** arr, int size)
 {
 	int sum1 = 0, sum2 = 0;
+
 	for (int i = 0; i < size; i++)
 	{
 		for (int j = 0; j < size; j++)
@@ -282,12 +287,65 @@ int processData1(int** arr, int size)
 			{
 				sum1 += arr[i][j];
 			}
+
 			else if (i == (size - j - 1))
 			{
 				sum2 += arr[i][j];
 			}
 		}
 	}
+
 	return fabs(sum1 - sum2);
 }
 
+void processResults(int* arr, int size)
+{
+	int* worst = new int[size];
+	int* best = new int[size];
+	int counterWorst = 0;
+	int counterBest = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (i == 0)
+		{
+			worst[i] = arr[i];
+			best[i] = arr[i];
+			continue;
+		}
+
+		else if (arr[i] < worst[i - 1])
+		{
+			worst[i] = arr[i];
+			best[i] = best[i - 1];
+			counterWorst++;
+		}
+
+		else if (arr[i] > best[i - 1])
+		{
+			best[i] = arr[i];
+			worst[i] = worst[i - 1];
+			counterBest++;
+		}
+
+		else
+		{
+			best[i] = best[i - 1];
+			worst[i] = worst[i - 1];
+		}
+	}
+
+	cout << "-------------------------------------------------\n";
+	cout << "| Play      | Result    | Best      | Worst     |\n";
+
+	for (int i = 0; i < size; i++)
+	{
+		cout << "|-----------|-----------|-----------|-----------|\n";
+		cout << "| " << setw(9) << i << " | " << setw(9) << arr[i];
+		cout << " | " << setw(9) << best[i] << " | " << setw(9) << worst[i] << " |\n";
+	}
+
+	cout << "-------------------------------------------------\n";
+	cout << "\nBest: " << counterBest << ";\n";
+	cout << "\nWorst: " << counterWorst << ".\n";
+}
