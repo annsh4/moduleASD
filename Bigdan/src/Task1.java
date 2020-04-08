@@ -63,7 +63,7 @@ public class Task1 {
             ArrayList<Integer> results = new ArrayList<Integer>();
             int cur = arr1[n-1];
             int end = arr2[0];
-            for (; cur < end; cur++) {
+            for (; cur <= end; cur++) {
                 boolean every = true;
                 for (int i=0; i < n; i++)
                     if (cur % arr1[i] > 0) {
