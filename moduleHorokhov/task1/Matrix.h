@@ -5,25 +5,24 @@
 #ifndef MODULEHOROKHOV_MATRIX_H
 #define MODULEHOROKHOV_MATRIX_H
 
-#include <iostream>
 
 class Matrix {
-    int rowCount;
-    int columnCount;
+    int rowCount, columnCount;
+    bool assigned;
+    int** a = new int*[rowCount];
 
     void deleteMatrix();
-
-    friend std::ostream &operator<< (std::ostream &out, Matrix &output);
+    bool isFilled();
 public:
-    int **matrix;
     Matrix();
     Matrix(int columns, int rows);
     ~Matrix();
 
 
-    void fillMatrixAuto(Matrix &filledMatrix);
-    void fillMatrixByYourself(int key_number, int rowCounter, int columnCounter, Matrix &filledMatrix);
-    int calculateDifference(Matrix &calcMatrix);
+    void fillMatrixAuto();
+    void fillMatrixByYourself(int key_number, int rowCounter, int columnCounter);
+    void calculateDifference();
+    void displayMatrix();
 };
 
 
