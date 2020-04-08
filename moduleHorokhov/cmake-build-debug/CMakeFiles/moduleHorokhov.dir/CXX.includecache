@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.cpp
-Matrix.h
-/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.h
-iostream
--
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.cpp
+FindLST.h
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.h
 ctime
 -
-cmath
+iostream
 -
 iomanip
 -
 
-/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.h
-iostream
--
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.h
 

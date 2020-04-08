@@ -3,7 +3,11 @@
 
 CMakeFiles/moduleHorokhov.dir/main.cpp.o: ../main.cpp
 CMakeFiles/moduleHorokhov.dir/main.cpp.o: ../task1/Matrix.h
+CMakeFiles/moduleHorokhov.dir/main.cpp.o: ../task2/FindLST.h
 
 CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o: ../task1/Matrix.cpp
 CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o: ../task1/Matrix.h
+
+CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.o: ../task2/FindLST.cpp
+CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.o: ../task2/FindLST.h
 
