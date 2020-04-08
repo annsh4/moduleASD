@@ -107,8 +107,12 @@ public class Main {
 
         System.out.println("Найденые элементы: ");
         for(int i=0; i<n2; i++) {
-            if (arr2[i] % temp[i] == 0) {
-                System.out.print(temp[i] + " ");
+            for (int j = 0; j < temp.length; j++) {
+                if(temp[j] == 0)
+                    continue;
+                if (arr2[i] % temp[j] == 0) {
+                    System.out.print(temp[j] + " ");
+                }
             }
         }
     }
