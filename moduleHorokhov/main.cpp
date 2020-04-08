@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "task1/Matrix.h"
+#include "task2/FindLST.h"
 
 int main() {
     bool flag = false;
@@ -77,12 +78,6 @@ int main() {
                 break;
             }
             case 2 : {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe574b6... Ended coding Task#2.
                 int __choice, firstArrCapacity, secondArrCapacity;
                 bool __flag = false;
                 std::cout << "Input capacity of the first array :" << std::endl;
@@ -151,7 +146,6 @@ int main() {
                         }
                     }
                 } while (!__flag);
->>>>>>> fe574b6... Ended coding Task#2.
             }
             case 0: {
                 std::cout << "Ending the program.." << std::endl;
