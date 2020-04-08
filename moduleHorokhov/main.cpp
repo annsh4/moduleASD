@@ -145,6 +145,8 @@ int main() {
                             break;
                         }
                     }
+                    delete [] firstArr;
+                    delete [] secondArr;
                 } while (!__flag);
             }
             case 0: {

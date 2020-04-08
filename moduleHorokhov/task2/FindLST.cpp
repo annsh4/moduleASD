@@ -22,7 +22,8 @@ FindLST::FindLST(int firstArr_size, int secondArr_size) {
 }
 
 FindLST::~FindLST() {
-
+    delete [] firstArr;
+    delete [] secondArr;
 }
 
 void FindLST::fillArraysAuto(int input_firstArr[], int input_secondArr[]) {
