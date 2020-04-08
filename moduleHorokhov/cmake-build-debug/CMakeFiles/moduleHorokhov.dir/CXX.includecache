@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.cpp
+Matrix.h
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.h
+iostream
+-
+ctime
+-
+cmath
+-
+iomanip
+-
+
+/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.h
+iostream
+-
+
