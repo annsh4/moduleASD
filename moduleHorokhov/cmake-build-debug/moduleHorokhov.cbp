@@ -89,6 +89,12 @@
 		<Unit filename="/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.h">
 			<Option target="moduleHorokhov"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.cpp">
+			<Option target="moduleHorokhov"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.h">
+			<Option target="moduleHorokhov"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

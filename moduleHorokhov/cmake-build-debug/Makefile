@@ -177,6 +177,33 @@ task1/Matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/moduleHorokhov.dir/build.make CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.s
 .PHONY : task1/Matrix.cpp.s
 
+task2/FindLST.o: task2/FindLST.cpp.o
+
+.PHONY : task2/FindLST.o
+
+# target to build an object file
+task2/FindLST.cpp.o:
+	$(MAKE) -f CMakeFiles/moduleHorokhov.dir/build.make CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.o
+.PHONY : task2/FindLST.cpp.o
+
+task2/FindLST.i: task2/FindLST.cpp.i
+
+.PHONY : task2/FindLST.i
+
+# target to preprocess a source file
+task2/FindLST.cpp.i:
+	$(MAKE) -f CMakeFiles/moduleHorokhov.dir/build.make CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.i
+.PHONY : task2/FindLST.cpp.i
+
+task2/FindLST.s: task2/FindLST.cpp.s
+
+.PHONY : task2/FindLST.s
+
+# target to generate assembly for a file
+task2/FindLST.cpp.s:
+	$(MAKE) -f CMakeFiles/moduleHorokhov.dir/build.make CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.s
+.PHONY : task2/FindLST.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... task1/Matrix.o"
 	@echo "... task1/Matrix.i"
 	@echo "... task1/Matrix.s"
+	@echo "... task2/FindLST.o"
+	@echo "... task2/FindLST.i"
+	@echo "... task2/FindLST.s"
 .PHONY : help
 
 

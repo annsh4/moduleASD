@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/moduleHorokhov.dir/main.cpp.o"
   "CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o"
+  "CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.o"
   "libmoduleHorokhov.dll.a"
   "moduleHorokhov.exe"
   "moduleHorokhov.pdb"

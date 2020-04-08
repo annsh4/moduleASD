@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/main.cpp" "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/cmake-build-debug/CMakeFiles/moduleHorokhov.dir/main.cpp.o"
   "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.cpp" "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/cmake-build-debug/CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o"
+  "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task2/FindLST.cpp" "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/cmake-build-debug/CMakeFiles/moduleHorokhov.dir/task2/FindLST.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
