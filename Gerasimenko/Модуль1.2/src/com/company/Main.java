@@ -4,15 +4,19 @@ import java.util.Scanner;
 
 public class Main {
 
-    static private int correctIntInput(){
+    static private int correctIntInput(int mode){
         int n =0;
         Scanner in = new Scanner(System.in);
         boolean flag = true;
         while(flag) {
             if (in.hasNextInt()) {
                 n = in.nextInt();
-                if(n > 10 || n < 1){
-                    System.out.println("Введите целое число от 1 до 10!");
+                if(mode == 1) {
+                    if (n > 10 || n < 1) {
+                        System.out.println("Введите целое число от 1 до 10!");
+                    } else {
+                        flag = false;
+                    }
                 }else{
                     flag = false;
                 }
@@ -28,7 +32,7 @@ public class Main {
     static private int[] setArr(int length){
         int[] mat = new int[length];
         for(int i=0; i<length; i++) {
-            mat[i] = correctIntInput();
+            mat[i] = correctIntInput(0);
         }
         return mat;
     }
@@ -45,10 +49,11 @@ public class Main {
 
         int n1, n2;
         System.out.println("Введите размер массива1(от 1 до 10): ");
-        n1 = correctIntInput();
+        n1 = correctIntInput(1);
+
 
         System.out.println("Введите размер массива2(от 1 до 10): ");
-        n2 = correctIntInput();
+        n2 = correctIntInput(1);
 
         int[] arr1 = new int[n1];
         int[] arr2 = new int[n2];
@@ -115,5 +120,7 @@ public class Main {
                 }
             }
         }
+
     }
+
 }
