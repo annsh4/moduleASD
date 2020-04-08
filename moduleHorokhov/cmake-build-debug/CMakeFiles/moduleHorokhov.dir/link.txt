@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/moduleHorokhov.dir/main.cpp.o  -o moduleHorokhov.exe -Wl,--out-implib,libmoduleHorokhov.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/moduleHorokhov.dir/main.cpp.o CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o  -o moduleHorokhov.exe -Wl,--out-implib,libmoduleHorokhov.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

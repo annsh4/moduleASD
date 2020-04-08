@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/main.cpp" "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/cmake-build-debug/CMakeFiles/moduleHorokhov.dir/main.cpp.o"
+  "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/task1/Matrix.cpp" "/cygdrive/c/Users/danii/CLionProjects/moduleASD/moduleHorokhov/cmake-build-debug/CMakeFiles/moduleHorokhov.dir/task1/Matrix.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
